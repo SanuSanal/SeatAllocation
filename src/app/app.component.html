@@ -1,0 +1,42 @@
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="page-caption">
+                    <h1 class="page-title">Seat Allocation</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.page-header-->
+<!-- news -->
+<div class="card-section">
+    <div class="container">
+        <div class="card-block bg-white mb30">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <!-- section-title -->
+                    <div class="section-title mb-0">
+                        <h2>Seat allcation for UST Global</h2>
+                        <p>Our approach is very simple: we define your problem and give the best solution. This application handles the seat allocation for employees for a building. Admin can assign seat to employees, view the assigned seats, and re-assign
+                            the seats</p>
+                        <h5>Building Structure</h5>
+
+                        <span>No. of floors : {{constants.MAX_NO_OF_FLOORS}}</span><br/>
+                        <span>No. of Seats per floor : {{constants.MAX_SEATS_PER_FLOOR}}</span> <br>
+                        <span>No. of Seats Reserved for Managers : {{constants.MAX_MANAGER_SEATS_PER_FLOOR}}</span>
+
+                    </div>
+                    <!-- /.section-title -->
+                    <div style="height: 20px;"></div>
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+                            <router-outlet></router-outlet>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

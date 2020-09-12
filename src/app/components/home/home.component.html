@@ -1,0 +1,42 @@
+<div>
+    <div class="card card-1">
+        <div class="card-body">
+            <h3>{{ updateMode == true ? "Update" : "New"}} Employee Registration</h3>
+            <a routerLink="/" class="btn btn-secondary float-right">Back to List</a>
+            <form [formGroup]="employeeForm" (ngSubmit)="saveEmployee()" novalidate>
+                <span *ngIf="validationMsg !=''">
+                    {{validationMsg}}
+                </span><br />
+                <div class="input-group">
+                    <input type="number" formControlName="employeeId" equired autofocus class="input--style-1" placeholder="Employee Id" />
+                </div>
+                <div class="input-group">
+                    <input type="text" formControlName="employeeName" required placeholder="Employee Name" class="input--style-1" />
+                </div>
+                <div class="input-group">
+                    <input type="text" formControlName="designation" required placeholder="Designation" class="input--style-1" />
+                </div>
+                <div>
+                    <label for="ismanger">Is Manager ?</label>
+                    <input type="checkbox" formControlName="isManager" name="ismanger" style="width: 5%;" />
+                </div>
+                <div class="rows row-space">
+                    <div class="col-50">
+                        <div class="input-group">
+                            <input type="number" formControlName="floor" required placeholder="Floor No" class="input--style-1" />
+                        </div>
+                    </div>
+                    <div class="col-50">
+                        <div class="input-group">
+                            <input type="number" formControlName="seatNo" required placeholder="Seat No" class="input--style-1" />
+                        </div>
+                    </div>
+                </div>
+                <div class="p-t-20">
+                    <input type="submit" class="btn btn--radius btn--green" />
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

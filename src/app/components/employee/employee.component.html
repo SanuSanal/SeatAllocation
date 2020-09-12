@@ -1,0 +1,21 @@
+<div>
+    <h2>All Employees List</h2>
+    <a routerLink="/saveEmployee" class="btn btn-primary float-right">Add New Employee</a>
+    <table *ngIf="employees != null" class="table table-hover">
+        <thead>
+            <td>Employee Id</td>
+            <td>Employee Name</td>
+            <td>Designation</td>
+            <td>Seat No</td>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of employees">
+                <td>{{emp.employeeUid}}</td>
+                <td>{{emp.employeeName}}</td>
+                <td>{{emp.designation}}</td>
+                <td>{{emp.seats.seatsPk.floor}}-{{emp.seats.seatsPk.seatNo}}</td>
+                <td><a [routerLink]="['/editEmployee', emp.employeeUid]">edit</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
